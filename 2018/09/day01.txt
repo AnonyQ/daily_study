@@ -1,0 +1,24 @@
+1. 根据traceId查询查询日志，以及日志打印的路径、打印到哪台机器
+2. 每个项目打印日志的机器分布
+ 1. 测试环境：
+  1.1 普通输出的信息info、error
+   admin: /home/souche/dev/software/tomcat-17080/logs
+   site: /home/souche/dev/software/tomcat-33080/logs
+  1.2 dubbo输出日志，外部调用本系统信息
+   admin/site: /home/souche/logs/sys
+ 2. 预发环境：（所在机器finance-staging-010168098063）
+  2.1 普通输出的信息info、error
+   admin: /home/souchelogs/lease-admin
+   site: /home/souchelogs/lease-site
+  2.2 dubbo输出日志，外部调用本系统信息
+   admin: /home/souchelogs/logs/sys/lease-admin
+   site: /home/souchelogs/logs/sys/lease-site
+ 3. 线上环境：
+  3.1 普通输出的信息info、error
+   admin: 
+   /home/souchelogs/applogs/lease-admin（所在机器lease-adminV2-00003）
+   /home/souchelogs/lease-admin（所在机器lease-adminV2-00001）
+   site：类似
+  3.2 dubbo输出日志，外部调用本系统信息
+   admin: /home/souchelogs/logs/sys/lease-admin（所在机器lease-adminV2-00001、lease-adminV2-00003）
+   site：类似
